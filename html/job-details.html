@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Senior Software Engineer | JobFinder</title>
+    <meta name="description" content="JobFinder is a modern job search portal to discover and apply to your next great opportunity." />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<header class="site-header">
+    <nav class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">JF</span>
+            <span class="brand-text">Job<strong>Finder</strong></span>
+        </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html" style="color:var(--blue-600);">Jobs</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+            
+            <li><a href="dashboard.html">Dashboard</a></li>
+
+            <!-- Shown when no one is logged in (default until auth.js runs) -->
+            <li id="navGuestLink"><a href="login.html">Login</a></li>
+            <li class="nav-cta" id="navGuestCta"><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+
+            <!-- Shown after login/register (auth.js toggles visibility) -->
+            <li id="navUserLink" style="display:none;"><a href="dashboard.html">👤 <span data-user-first-name>Account</span></a></li>
+            <li class="nav-cta" id="navUserCta" style="display:none;"><a href="#" class="btn btn-outline js-logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+<section class="page-hero small-hero">
+    <div class="container">
+        <h1>Senior Software Engineer</h1>
+        <p>NimbusTech &nbsp;•&nbsp; Bengaluru, India</p>
+    </div>
+</section>
+
+<div class="job-details-layout">
+    <div class="details-main">
+        <div class="alert alert-info">This is a static example detail page for "Senior Software Engineer" (Job #1). In the dynamic version, every job links to its own live detail page rendered from data.</div>
+
+        <div class="details-header">
+            <div class="job-logo">NT</div>
+            <div>
+                <h1>Senior Software Engineer</h1>
+                <a class="company-link" href="company-details.html?id=1">NimbusTech</a>
+                <div class="job-meta" style="margin-top:10px;">
+                    <span>📍 Bengaluru, India</span>
+                    <span>🧭 5-8 years</span>
+                    <span>🕐 Posted 2 days ago</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="details-block">
+            <h3>Job Description</h3>
+            <p>Join NimbusTech's platform team to design and build the next generation of our cloud orchestration engine used by thousands of customers worldwide.</p>
+        </div>
+
+        <div class="details-block">
+            <h3>Key Responsibilities</h3>
+            <ul>
+                <li>Design and implement scalable backend services in C# and Go</li>
+                <li>Own the architecture for key platform components</li>
+                <li>Mentor junior engineers and conduct code reviews</li>
+            </ul>
+        </div>
+
+        <div class="details-block">
+            <h3>Requirements</h3>
+            <ul>
+                <li>Bachelor's degree in Computer Science or related field</li>
+                <li>5+ years of backend development experience</li>
+            </ul>
+        </div>
+
+        <div class="details-block">
+            <h3>Required Skills</h3>
+            <div class="skill-tags">
+                <span>C#</span><span>ASP.NET Core</span><span>Kubernetes</span><span>Azure</span><span>SQL</span>
+            </div>
+        </div>
+
+        <div class="details-block">
+            <h3>Benefits</h3>
+            <ul>
+                <li>Health insurance for family</li>
+                <li>Stock options</li>
+                <li>Flexible working hours</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="details-side">
+        <div class="info-row"><span>Salary</span><span>₹22,00,000 - ₹32,00,000</span></div>
+        <div class="info-row"><span>Job Type</span><span>Full-time</span></div>
+        <div class="info-row"><span>Category</span><span>Software Development</span></div>
+        <div class="info-row"><span>Experience</span><span>5-8 years</span></div>
+<div class="resume-section">
+
+    <h2>Upload Resume</h2>
+
+    <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx">
+
+    <button id="checkATS" class="btn btn-primary">
+        Check ATS Score
+    </button>
+
+</div>
+
+<div id="atsResult" style="display:none;">
+
+    <h3>ATS Result</h3>
+
+    Resume:
+    <span id="resumeName"></span>
+
+    <br><br>
+
+    ATS Score:
+    <span id="atsScore"></span>
+
+    <div style="background:#ddd;height:15px;border-radius:20px;margin:15px 0;">
+
+        <div id="progressBar" style="height:15px;width:0;background:#2563EB;border-radius:20px;">
+        </div>
+
+    </div>
+
+    <p id="feedback"></p>
+
+</div>
+
+<button id="applyBtn" class="btn btn-primary">
+
+    Apply Now
+
+</button>
+
+<div id="applyPopup" class="popup">
+
+    <div class="popup-content">
+
+        <h2>Application Submitted</h2>
+
+        <p>
+            Your application has been submitted successfully.
+        </p>
+
+        <button onclick="closePopup()">
+
+            OK
+
+        </button>
+
+    </div>
+
+</div>
+        <button type="button" class="btn btn-outline btn-block">☆ Save Job</button>
+
+        <div class="related-jobs">
+            <h3 style="font-size:1rem; color:var(--blue-900);">Related Jobs</h3>
+            <a href="job-details.html?id=2">
+                <strong style="font-size:0.9rem;">Frontend Developer</strong>
+                <div class="muted" style="font-size:0.8rem;">NimbusTech &middot; Bengaluru, India</div>
+            </a><a href="job-details.html?id=3">
+                <strong style="font-size:0.9rem;">DevOps Engineer</strong>
+                <div class="muted" style="font-size:0.8rem;">NimbusTech &middot; Bengaluru, India</div>
+            </a><a href="job-details.html?id=4">
+                <strong style="font-size:0.9rem;">Backend Engineer (.NET)</strong>
+                <div class="muted" style="font-size:0.8rem;">Vertex Systems &middot; Noida, India</div>
+            </a>
+        </div>
+    </div>
+</div>
+    </main>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-col footer-brand">
+            <div class="brand">
+                <span class="brand-mark">JF</span>
+                <span class="brand-text">Job<strong>Finder</strong></span>
+            </div>
+            <p>JobFinder connects ambitious professionals with companies building the future. Search smarter, apply faster, get hired sooner.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>For Candidates</h4>
+            <ul>
+                <li><a href="jobs.html">Browse Jobs</a></li>
+                <li><a href="companies.html">Browse Companies</a></li>
+                <li><a href="register.html">Create Account</a></li>
+                <li><a href="dashboard.html">Your Dashboard</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </div>
+
+        
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 JobFinder. All rights reserved. Static HTML/CSS/CSHARP demo build.</p>
+    </div>
+</footer>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

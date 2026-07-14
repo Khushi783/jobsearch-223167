@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | JobFinder</title>
+    <meta name="description" content="JobFinder is a modern job search portal to discover and apply to your next great opportunity." />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-require-auth="true">
+<header class="site-header">
+    <nav class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">JF</span>
+            <span class="brand-text">Job<strong>Finder</strong></span>
+        </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="dashboard.html" style="color:var(--blue-600);">Dashboard</a></li>
+
+            <!-- Shown when no one is logged in (default until auth.js runs) -->
+            <li id="navGuestLink"><a href="login.html">Login</a></li>
+            <li class="nav-cta" id="navGuestCta"><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+
+            <!-- Shown after login/register (auth.js toggles visibility) -->
+            <li id="navUserLink" style="display:none;"><a href="dashboard.html">👤 <span data-user-first-name>Account</span></a></li>
+            <li class="nav-cta" id="navUserCta" style="display:none;"><a href="#" class="btn btn-outline js-logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+<section class="page-hero small-hero">
+    <div class="container">
+        <h1>Welcome back, <span data-user-first-name></span></h1>
+        <p>Here's what's happening with your job search. <em>(Job/application data below is static example data; only your name/role come from login.)</em></p>
+    </div>
+</section>
+
+<div class="dashboard-layout">
+    <aside class="dashboard-side">
+        
+        <h3><span data-user-name></span></h3>
+        <p class="role"><span data-user-role>Candidate</span></p>
+        <ul>
+            <li><a class="active" href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="saved-jobs.html">Saved Jobs</a></li>
+            <li><a href="applied-jobs.html">Applied Jobs</a></li>
+            <li><a href="#" class="js-logout">Logout</a></li>
+        </ul>
+    </aside>
+
+    <div>
+        <div class="dashboard-cards">
+            <div class="stat-card"><h3>2</h3><p>Saved Jobs</p></div>
+            <div class="stat-card"><h3>2</h3><p>Applications</p></div>
+            <div class="stat-card"><h3>4</h3><p>Recommended for You</p></div>
+        </div>
+
+        <div class="dashboard-section">
+            <h3>Recommended Jobs</h3>
+            <div class="grid grid-2">
+                <div class="card job-card">
+                    <div class="job-card-top">
+                        <div class="job-logo">NT</div>
+                        <span class="job-type-badge">Full-time</span>
+                    </div>
+                    <div>
+                        <h3><a href="job-details.html?id=1">Senior Software Engineer</a></h3>
+                        <p class="job-company">NimbusTech</p>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Bengaluru, India</span>
+                        <span>🧭 5-8 years</span>
+                    </div>
+                    <p class="job-salary">₹22,00,000 - ₹32,00,000</p>
+                    <div class="job-card-actions">
+                        <a href="job-details.html?id=1" class="btn btn-primary">View Job</a>
+                    </div>
+                </div><div class="card job-card">
+                    <div class="job-card-top">
+                        <div class="job-logo">NT</div>
+                        <span class="job-type-badge">Full-time</span>
+                    </div>
+                    <div>
+                        <h3><a href="job-details.html?id=2">Frontend Developer</a></h3>
+                        <p class="job-company">NimbusTech</p>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Bengaluru, India</span>
+                        <span>🧭 2-4 years</span>
+                    </div>
+                    <p class="job-salary">₹10,00,000 - ₹16,00,000</p>
+                    <div class="job-card-actions">
+                        <a href="job-details.html?id=2" class="btn btn-primary">View Job</a>
+                    </div>
+                </div><div class="card job-card">
+                    <div class="job-card-top">
+                        <div class="job-logo">NT</div>
+                        <span class="job-type-badge">Full-time</span>
+                    </div>
+                    <div>
+                        <h3><a href="job-details.html?id=3">DevOps Engineer</a></h3>
+                        <p class="job-company">NimbusTech</p>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Bengaluru, India</span>
+                        <span>🧭 3-6 years</span>
+                    </div>
+                    <p class="job-salary">₹15,00,000 - ₹24,00,000</p>
+                    <div class="job-card-actions">
+                        <a href="job-details.html?id=3" class="btn btn-primary">View Job</a>
+                    </div>
+                </div><div class="card job-card">
+                    <div class="job-card-top">
+                        <div class="job-logo">VS</div>
+                        <span class="job-type-badge">Full-time</span>
+                    </div>
+                    <div>
+                        <h3><a href="job-details.html?id=4">Backend Engineer (.NET)</a></h3>
+                        <p class="job-company">Vertex Systems</p>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Noida, India</span>
+                        <span>🧭 3-5 years</span>
+                    </div>
+                    <p class="job-salary">₹12,00,000 - ₹20,00,000</p>
+                    <div class="job-card-actions">
+                        <a href="job-details.html?id=4" class="btn btn-primary">View Job</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h3>Recent Applications</h3>
+            <div class="jobs-list">
+                <div class="card job-card">
+                    <div class="job-logo">NT</div>
+                    <div class="job-card-main">
+                        <h3><a href="job-details.html?id=1">Senior Software Engineer</a></h3>
+                        <p class="job-company">NimbusTech &middot; Bengaluru, India</p>
+                    </div>
+                    <div class="job-card-actions">
+                        <span class="job-type-badge">Applied ✓</span>
+                    </div>
+                </div><div class="card job-card">
+                    <div class="job-logo">BW</div>
+                    <div class="job-card-main">
+                        <h3><a href="job-details.html?id=10">Digital Marketing Manager</a></h3>
+                        <p class="job-company">BrightWave Media &middot; Mumbai, India</p>
+                    </div>
+                    <div class="job-card-actions">
+                        <span class="job-type-badge">Applied ✓</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h3>Saved Jobs</h3>
+            <div class="jobs-list">
+                <div class="card job-card">
+                    <div class="job-logo">PC</div>
+                    <div class="job-card-main">
+                        <h3><a href="job-details.html?id=7">UI/UX Designer</a></h3>
+                        <p class="job-company">PixelCraft Studio &middot; Pune, India</p>
+                    </div>
+                    <div class="job-card-actions">
+                        <a href="job-details.html?id=7" class="btn btn-outline">View</a>
+                    </div>
+                </div><div class="card job-card">
+                    <div class="job-logo">DF</div>
+                    <div class="job-card-main">
+                        <h3><a href="job-details.html?id=15">Data Scientist</a></h3>
+                        <p class="job-company">DataForge Analytics &middot; Hyderabad, India</p>
+                    </div>
+                    <div class="job-card-actions">
+                        <a href="job-details.html?id=15" class="btn btn-outline">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-col footer-brand">
+            <div class="brand">
+                <span class="brand-mark">JF</span>
+                <span class="brand-text">Job<strong>Finder</strong></span>
+            </div>
+            <p>JobFinder connects ambitious professionals with companies building the future. Search smarter, apply faster, get hired sooner.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>For Candidates</h4>
+            <ul>
+                <li><a href="jobs.html">Browse Jobs</a></li>
+                <li><a href="companies.html">Browse Companies</a></li>
+                <li><a href="register.html">Create Account</a></li>
+                <li><a href="dashboard.html">Your Dashboard</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 JobFinder. All rights reserved. Static HTML/CSS/CSHARP demo build.</p>
+    </div>
+</footer>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

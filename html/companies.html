@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Companies | JobFinder</title>
+    <meta name="description" content="JobFinder is a modern job search portal to discover and apply to your next great opportunity." />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<header class="site-header">
+    <nav class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">JF</span>
+            <span class="brand-text">Job<strong>Finder</strong></span>
+        </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="companies.html" style="color:var(--blue-600);">Companies</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+            
+            <li><a href="dashboard.html">Dashboard</a></li>
+
+            <!-- Shown when no one is logged in (default until auth.js runs) -->
+            <li id="navGuestLink"><a href="login.html">Login</a></li>
+            <li class="nav-cta" id="navGuestCta"><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+
+            <!-- Shown after login/register (auth.js toggles visibility) -->
+            <li id="navUserLink" style="display:none;"><a href="dashboard.html">👤 <span data-user-first-name>Account</span></a></li>
+            <li class="nav-cta" id="navUserCta" style="display:none;"><a href="#" class="btn btn-outline js-logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+<section class="page-hero">
+    <div class="container">
+        <h1>Explore Companies</h1>
+        <p>Discover companies that are actively hiring across every industry.</p>
+    </div>
+</section>
+
+<form class="companies-toolbar" action="companies.html" method="get">
+    <input type="text" name="keyword" placeholder="Search company name..." />
+    <select name="industry">
+        <option value="">All Industries</option>
+        <option value="Cloud Computing">Cloud Computing</option><option value="Data & Analytics">Data & Analytics</option><option value="Design & Creative">Design & Creative</option><option value="Digital Marketing">Digital Marketing</option><option value="EdTech">EdTech</option><option value="Enterprise Software">Enterprise Software</option><option value="FMCG">FMCG</option><option value="Financial Services">Financial Services</option><option value="Healthcare">Healthcare</option><option value="Logistics & Supply Chain">Logistics & Supply Chain</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Filter</button>
+</form>
+
+<section class="section">
+    <div class="container">
+        <div class="grid grid-3">
+            <a class="card company-card" href="company-details.html?id=1">
+                    <div class="job-logo">NT</div>
+                    <h3>NimbusTech</h3>
+                    <p class="industry">Cloud Computing</p>
+                    <p class="muted" style="font-size:0.82rem; margin-bottom:14px;">Bengaluru, India</p>
+                    <span class="openings">5 open roles</span>
+                </a><a class="card company-card" href="company-details.html?id=2">
+                    <div class="job-logo">BW</div>
+                    <h3>BrightWave Media</h3>
+                    <p class="industry">Digital Marketing</p>
+                    <p class="muted" style="font-size:0.82rem; margin-bottom:14px;">Mumbai, India</p>
+                    <span class="openings">3 open roles</span>
+                </a><a class="card company-card" href="company-details.html?id=3">
+                    <div class="job-logo">PC</div>
+                    <h3>PixelCraft Studio</h3>
+                    <p class="industry">Design & Creative</p>
+                    <p class="muted" style="font-size:0.82rem; margin-bottom:14px;">Pune, India</p>
+                    <span class="openings">3 open roles</span>
+                </a><a class="card company-card" href="company-details.html?id=4">
+                    <div class="job-logo">FE</div>
+                    <h3>FinEdge Capital</h3>
+                    <p class="industry">Financial Services</p>
+                    <p class="muted" style="font-size:0.82rem; margin-bottom:14px;">Gurugram, India</p>
+                    <span class="openings">4 open roles</span>
+                </a><a class="card company-card" href="company-details.html?id=5">
+                    <div class="job-logo">DF</div>
+                    <h3>DataForge Analytics</h3>
+                    <p class="industry">Data & Analytics</p>
+                    <p class="muted" style="font-size:0.82rem; margin-bottom:14px;">Hyderabad, India</p>
+                    <span class="openings">4 open roles</span>
+                </a><a class="card company-card" href="company-details.html?id=6">
+                    <div class="job-logo">GL</div>
+                    <h3>GreenLeaf Foods</h3>
+                    <p class="industry">FMCG</p>
+                    <p class="muted" style="font-size:0.82rem; margin-bottom:14px;">Delhi, India</p>
+                    <span class="openings">3 open roles</span>
+                </a><a class="card company-card" href="company-details.html?id=7">
+                    <div class="job-logo">SH</div>
+                    <h3>Sunrise Health Group</h3>
+                    <p class="industry">Healthcare</p>
+                    <p class="muted" style="font-size:0.82rem; margin-bottom:14px;">Chennai, India</p>
+                    <span class="openings">2 open roles</span>
+                </a><a class="card company-card" href="company-details.html?id=8">
+                    <div class="job-logo">VS</div>
+                    <h3>Vertex Systems</h3>
+                    <p class="industry">Enterprise Software</p>
+                    <p class="muted" style="font-size:0.82rem; margin-bottom:14px;">Noida, India</p>
+                    <span class="openings">3 open roles</span>
+                </a><a class="card company-card" href="company-details.html?id=9">
+                    <div class="job-logo">SL</div>
+                    <h3>Skyline Logistics</h3>
+                    <p class="industry">Logistics & Supply Chain</p>
+                    <p class="muted" style="font-size:0.82rem; margin-bottom:14px;">Ahmedabad, India</p>
+                    <span class="openings">2 open roles</span>
+                </a><a class="card company-card" href="company-details.html?id=10">
+                    <div class="job-logo">SO</div>
+                    <h3>Solstice Learning</h3>
+                    <p class="industry">EdTech</p>
+                    <p class="muted" style="font-size:0.82rem; margin-bottom:14px;">Remote</p>
+                    <span class="openings">3 open roles</span>
+                </a>
+        </div>
+    </div>
+</section>
+    </main>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-col footer-brand">
+            <div class="brand">
+                <span class="brand-mark">JF</span>
+                <span class="brand-text">Job<strong>Finder</strong></span>
+            </div>
+            <p>JobFinder connects ambitious professionals with companies building the future. Search smarter, apply faster, get hired sooner.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>For Candidates</h4>
+            <ul>
+                <li><a href="jobs.html">Browse Jobs</a></li>
+                <li><a href="companies.html">Browse Companies</a></li>
+                <li><a href="register.html">Create Account</a></li>
+                <li><a href="dashboard.html">Your Dashboard</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </div>
+
+        
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 JobFinder. All rights reserved. Static HTML/CSS/CHARP demo build.</p>
+    </div>
+</footer>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

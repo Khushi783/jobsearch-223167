@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | JobFinder</title>
+    <meta name="description" content="JobFinder is a modern job search portal to discover and apply to your next great opportunity." />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<header class="site-header">
+    <nav class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">JF</span>
+            <span class="brand-text">Job<strong>Finder</strong></span>
+        </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+           
+            <li><a href="dashboard.html">Dashboard</a></li>
+
+            <!-- Shown when no one is logged in (default until auth.js runs) -->
+            <li id="navGuestLink"><a href="login.html">Login</a></li>
+            <li class="nav-cta" id="navGuestCta"><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+
+            <!-- Shown after login/register (auth.js toggles visibility) -->
+            <li id="navUserLink" style="display:none;"><a href="dashboard.html">👤 <span data-user-first-name>Account</span></a></li>
+            <li class="nav-cta" id="navUserCta" style="display:none;"><a href="#" class="btn btn-outline js-logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+<section class="page-hero small-hero">
+    <div class="container">
+        <h1>Welcome Back</h1>
+        <p>Log in to manage your applications, saved jobs, or job postings.</p>
+    </div>
+</section>
+
+<div class="form-shell">
+    <h2>Login</h2>
+    <p class="sub">
+        Demo candidate: <strong>candidate@example.com</strong> / <strong>password123</strong><br />
+        Demo employer: <strong>employer@example.com</strong> / <strong>password123</strong><br />
+        <em>Or enter any name/email — this static demo remembers whatever you type.</em>
+    </p>
+
+    <div id="loginError" class="form-error" style="display:none;">Please enter both an email and a password.</div>
+
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="fullName">Your Name</label>
+            <input type="text" id="fullName" placeholder="e.g. Priya Sharma" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="••••••••" required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Log In</button>
+    </form>
+
+    <p class="form-foot">Don't have an account? <a href="register.html">Sign up</a></p>
+</div>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var email = document.getElementById("email").value.trim();
+        var password = document.getElementById("password").value;
+        var typedName = document.getElementById("fullName").value.trim();
+
+        if (!email || !password) {
+            document.getElementById("loginError").style.display = "block";
+            return;
+        }
+
+        // Recognize the two demo accounts by email; otherwise use whatever
+        // name the person typed (or derive one from their email).
+        var name = typedName;
+        var role = "Candidate";
+        var company = "";
+
+        if (email.toLowerCase() === "employer@example.com") {
+            role = "Employer";
+            company = "NimbusTech";
+            if (!name) name = "Demo Employer";
+        } else if (email.toLowerCase() === "candidate@example.com") {
+            if (!name) name = "Demo Candidate";
+        } else if (!name) {
+            name = email.split("@")[0]
+                .replace(/[._]/g, " ")
+                .replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+        }
+
+        JobFinderAuth.setUser({ name: name, email: email, role: role, company: company });
+        window.location.href = "dashboard.html";
+    });
+</script>
+    </main>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-col footer-brand">
+            <div class="brand">
+                <span class="brand-mark">JF</span>
+                <span class="brand-text">Job<strong>Finder</strong></span>
+            </div>
+            <p>JobFinder connects ambitious professionals with companies building the future. Search smarter, apply faster, get hired sooner.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>For Candidates</h4>
+            <ul>
+                <li><a href="jobs.html">Browse Jobs</a></li>
+                <li><a href="companies.html">Browse Companies</a></li>
+                <li><a href="register.html">Create Account</a></li>
+                <li><a href="dashboard.html">Your Dashboard</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </div>
+
+        
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 JobFinder. All rights reserved. Static HTML/CSS/CSHARP demo build.</p>
+    </div>
+</footer>
+
+    <script src="../js/auth.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.getElementById("loginForm").addEventListener("submit", function (e) {
+
+                e.preventDefault();
+
+                const email = document.getElementById("email").value.trim();
+                const password = document.getElementById("password").value;
+                const typedName = document.getElementById("fullName").value.trim();
+
+                if (!email || !password) {
+                    document.getElementById("loginError").style.display = "block";
+                    return;
+                }
+
+                let name = typedName;
+                let role = "Candidate";
+                let company = "";
+
+                if (email.toLowerCase() === "employer@example.com") {
+                    role = "Employer";
+                    company = "NimbusTech";
+                    if (!name) name = "Demo Employer";
+                } else if (email.toLowerCase() === "candidate@example.com") {
+                    if (!name) name = "Demo Candidate";
+                } else if (!name) {
+                    name = email.split("@")[0]
+                        .replace(/[._]/g, " ")
+                        .replace(/\b\w/g, c => c.toUpperCase());
+                }
+
+                JobFinderAuth.setUser({
+                    name: name,
+                    email: email,
+                    role: role,
+                    company: company
+                });
+
+                window.location.href = "dashboard.html";
+
+            });
+
+        });
+    </script>
+</body>
+</html>

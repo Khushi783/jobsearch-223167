@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Categories | JobFinder</title>
+    <meta name="description" content="JobFinder is a modern job search portal to discover and apply to your next great opportunity." />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<header class="site-header">
+    <nav class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">JF</span>
+            <span class="brand-text">Job<strong>Finder</strong></span>
+        </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li><a href="categories.html" style="color:var(--blue-600);">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+           
+            <li><a href="dashboard.html">Dashboard</a></li>
+
+            <!-- Shown when no one is logged in (default until auth.js runs) -->
+            <li id="navGuestLink"><a href="login.html">Login</a></li>
+            <li class="nav-cta" id="navGuestCta"><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+
+            <!-- Shown after login/register (auth.js toggles visibility) -->
+            <li id="navUserLink" style="display:none;"><a href="dashboard.html">👤 <span data-user-first-name>Account</span></a></li>
+            <li class="nav-cta" id="navUserCta" style="display:none;"><a href="#" class="btn btn-outline js-logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+<section class="page-hero">
+    <div class="container">
+        <h1>Browse Job Categories</h1>
+        <p>Explore opportunities organized by field so you can focus on what matters to you.</p>
+    </div>
+</section>
+
+<section class="categories-grid-wrap">
+    <div class="grid grid-4">
+        <a class="card category-card" href="jobs.html?category=Software+Development">
+                <div class="icon">💻</div>
+                <h4>Software Development</h4>
+                <p class="muted" style="margin-bottom:10px;">Engineering and programming roles.</p>
+                <span class="openings">6 open roles</span>
+            </a><a class="card category-card" href="jobs.html?category=Design">
+                <div class="icon">🎨</div>
+                <h4>Design</h4>
+                <p class="muted" style="margin-bottom:10px;">UI/UX and creative design roles.</p>
+                <span class="openings">3 open roles</span>
+            </a><a class="card category-card" href="jobs.html?category=Marketing">
+                <div class="icon">📈</div>
+                <h4>Marketing</h4>
+                <p class="muted" style="margin-bottom:10px;">Digital marketing and growth roles.</p>
+                <span class="openings">3 open roles</span>
+            </a><a class="card category-card" href="jobs.html?category=Sales">
+                <div class="icon">🤝</div>
+                <h4>Sales</h4>
+                <p class="muted" style="margin-bottom:10px;">Business development and sales roles.</p>
+                <span class="openings">2 open roles</span>
+            </a><a class="card category-card" href="jobs.html?category=Data+Science">
+                <div class="icon">📊</div>
+                <h4>Data Science</h4>
+                <p class="muted" style="margin-bottom:10px;">Analytics and machine learning roles.</p>
+                <span class="openings">3 open roles</span>
+            </a><a class="card category-card" href="jobs.html?category=Human+Resources">
+                <div class="icon">🧑‍💼</div>
+                <h4>Human Resources</h4>
+                <p class="muted" style="margin-bottom:10px;">Recruiting and people operations roles.</p>
+                <span class="openings">2 open roles</span>
+            </a><a class="card category-card" href="jobs.html?category=Finance">
+                <div class="icon">💰</div>
+                <h4>Finance</h4>
+                <p class="muted" style="margin-bottom:10px;">Accounting and financial analysis roles.</p>
+                <span class="openings">3 open roles</span>
+            </a><a class="card category-card" href="jobs.html?category=Customer+Support">
+                <div class="icon">🎧</div>
+                <h4>Customer Support</h4>
+                <p class="muted" style="margin-bottom:10px;">Customer success and support roles.</p>
+                <span class="openings">3 open roles</span>
+            </a>
+    </div>
+</section>
+    </main>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-col footer-brand">
+            <div class="brand">
+                <span class="brand-mark">JF</span>
+                <span class="brand-text">Job<strong>Finder</strong></span>
+            </div>
+            <p>JobFinder connects ambitious professionals with companies building the future. Search smarter, apply faster, get hired sooner.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>For Candidates</h4>
+            <ul>
+                <li><a href="jobs.html">Browse Jobs</a></li>
+                <li><a href="companies.html">Browse Companies</a></li>
+                <li><a href="register.html">Create Account</a></li>
+                <li><a href="dashboard.html">Your Dashboard</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </div>
+
+       
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 JobFinder. All rights reserved. Static HTML/CSS/CSHARP demo build.</p>
+    </div>
+</footer>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

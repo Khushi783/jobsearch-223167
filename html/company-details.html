@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NimbusTech | JobFinder</title>
+    <meta name="description" content="JobFinder is a modern job search portal to discover and apply to your next great opportunity." />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<header class="site-header">
+    <nav class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">JF</span>
+            <span class="brand-text">Job<strong>Finder</strong></span>
+        </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="companies.html" style="color:var(--blue-600);">Companies</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+            
+            <li><a href="dashboard.html">Dashboard</a></li>
+
+            <!-- Shown when no one is logged in (default until auth.js runs) -->
+            <li id="navGuestLink"><a href="login.html">Login</a></li>
+            <li class="nav-cta" id="navGuestCta"><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+
+            <!-- Shown after login/register (auth.js toggles visibility) -->
+            <li id="navUserLink" style="display:none;"><a href="dashboard.html">👤 <span data-user-first-name>Account</span></a></li>
+            <li class="nav-cta" id="navUserCta" style="display:none;"><a href="#" class="btn btn-outline js-logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+<section class="page-hero small-hero">
+    <div class="container">
+        <h1>NimbusTech</h1>
+        <p>Cloud Computing</p>
+    </div>
+</section>
+
+<div class="company-details-header">
+    <div class="job-logo">NT</div>
+    <div>
+        <h1>NimbusTech</h1>
+        <p class="muted">NimbusTech builds scalable cloud infrastructure trusted by startups and enterprises alike.</p>
+        <div class="meta">
+            <span>📍 Bengaluru, India</span>
+            <span>📅 Founded 2014</span>
+            <span>👥 500-1000 employees</span>
+            <span>💼 5 open roles</span>
+            <a href="https://www.nimbustech.example.com" target="_blank" rel="noopener">🔗 Visit Website</a>
+        </div>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="alert alert-info">This is a static example detail page for "NimbusTech" (Company #1). In the dynamic version, every company links to its own live detail page rendered from data.</div>
+        <div class="section-head" style="text-align:left; margin-bottom:30px;">
+            <h2>Open Positions at NimbusTech</h2>
+        
+
+        <div class="jobs-list">
+            <div class="card job-card">
+                    <div class="job-logo">NT</div>
+                    <div class="job-card-main">
+                        <div class="job-card-top">
+                            <div>
+                                <h3><a href="job-details.html?id=1">Senior Software Engineer</a></h3>
+                                <p class="job-company">NimbusTech</p>
+                            </div>
+                            <span class="job-type-badge">Full-time</span>
+                        </div>
+                        <div class="job-meta">
+                            <span>📍 Bengaluru, India</span>
+                            <span>🧭 5-8 years</span>
+                            <span>🗂️ Software Development</span>
+                            <span>🕐 2 days ago</span>
+                        </div>
+                        <p class="job-salary">₹22,00,000 - ₹32,00,000</p>
+                    </div>
+                    <div class="job-card-actions">
+                        <a href="job-details.html?id=1" class="btn btn-primary">View Details</a>
+                        <button type="button" class="save-btn" title="Save job (static demo)">☆</button>
+                    </div>
+                </div><div class="card job-card">
+                    <div class="job-logo">NT</div>
+                    <div class="job-card-main">
+                        <div class="job-card-top">
+                            <div>
+                                <h3><a href="job-details.html?id=2">Frontend Developer</a></h3>
+                                <p class="job-company">NimbusTech</p>
+                            </div>
+                            <span class="job-type-badge">Full-time</span>
+                        </div>
+                        <div class="job-meta">
+                            <span>📍 Bengaluru, India</span>
+                            <span>🧭 2-4 years</span>
+                            <span>🗂️ Software Development</span>
+                            <span>🕐 5 days ago</span>
+                        </div>
+                        <p class="job-salary">₹10,00,000 - ₹16,00,000</p>
+                    </div>
+                    <div class="job-card-actions">
+                        <a href="job-details.html?id=2" class="btn btn-primary">View Details</a>
+                        <button type="button" class="save-btn" title="Save job (static demo)">☆</button>
+                    </div>
+                </div><div class="card job-card">
+                    <div class="job-logo">NT</div>
+                    <div class="job-card-main">
+                        <div class="job-card-top">
+                            <div>
+                                <h3><a href="job-details.html?id=3">DevOps Engineer</a></h3>
+                                <p class="job-company">NimbusTech</p>
+                            </div>
+                            <span class="job-type-badge">Full-time</span>
+                        </div>
+                        <div class="job-meta">
+                            <span>📍 Bengaluru, India</span>
+                            <span>🧭 3-6 years</span>
+                            <span>🗂️ Software Development</span>
+                            <span>🕐 10 days ago</span>
+                        </div>
+                        <p class="job-salary">₹15,00,000 - ₹24,00,000</p>
+                    </div>
+                    <div class="job-card-actions">
+                        <a href="job-details.html?id=3" class="btn btn-primary">View Details</a>
+                        <button type="button" class="save-btn" title="Save job (static demo)">☆</button>
+                    </div>
+                </div><div class="card job-card">
+                    <div class="job-logo">NT</div>
+                    <div class="job-card-main">
+                        <div class="job-card-top">
+                            <div>
+                                <h3><a href="job-details.html?id=17">Machine Learning Engineer</a></h3>
+                                <p class="job-company">NimbusTech</p>
+                            </div>
+                            <span class="job-type-badge">Full-time</span>
+                        </div>
+                        <div class="job-meta">
+                            <span>📍 Bengaluru, India</span>
+                            <span>🧭 4-7 years</span>
+                            <span>🗂️ Data Science</span>
+                            <span>🕐 4 days ago</span>
+                        </div>
+                        <p class="job-salary">₹20,00,000 - ₹30,00,000</p>
+                    </div>
+                    <div class="job-card-actions">
+                        <a href="job-details.html?id=17" class="btn btn-primary">View Details</a>
+                        <button type="button" class="save-btn" title="Save job (static demo)">☆</button>
+                    </div>
+                </div><div class="card job-card">
+                    <div class="job-logo">NT</div>
+                    <div class="job-card-main">
+                        <div class="job-card-top">
+                            <div>
+                                <h3><a href="job-details.html?id=24">Technical Support Engineer</a></h3>
+                                <p class="job-company">NimbusTech</p>
+                            </div>
+                            <span class="job-type-badge">Full-time</span>
+                        </div>
+                        <div class="job-meta">
+                            <span>📍 Bengaluru, India</span>
+                            <span>🧭 1-3 years</span>
+                            <span>🗂️ Customer Support</span>
+                            <span>🕐 8 days ago</span>
+                        </div>
+                        <p class="job-salary">₹7,00,000 - ₹12,00,000</p>
+                    </div>
+                    <div class="job-card-actions">
+                        <a href="job-details.html?id=24" class="btn btn-primary">View Details</a>
+                        <button type="button" class="save-btn" title="Save job (static demo)">☆</button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="section-foot">
+            <a href="companies.html" class="btn btn-outline">← Back to All Companies</a>
+        </div>
+    </div>
+</section>
+    </main>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-col footer-brand">
+            <div class="brand">
+                <span class="brand-mark">JF</span>
+                <span class="brand-text">Job<strong>Finder</strong></span>
+            </div>
+            <p>JobFinder connects ambitious professionals with companies building the future. Search smarter, apply faster, get hired sooner.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>For Candidates</h4>
+            <ul>
+                <li><a href="jobs.html">Browse Jobs</a></li>
+                <li><a href="companies.html">Browse Companies</a></li>
+                <li><a href="register.html">Create Account</a></li>
+                <li><a href="dashboard.html">Your Dashboard</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </div>
+
+        
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 JobFinder. All rights reserved. Static HTML/CSS/CSHARP demo build.</p>
+    </div>
+</footer>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>
